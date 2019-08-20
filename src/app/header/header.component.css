@@ -1,0 +1,74 @@
+
+.search-input{
+  font-size: medium;
+  background-color: white;
+}
+.search-input>input{
+  width: 90%;
+  border-radius: 1vw;
+  border: none;
+  outline: none;
+  color: lightgray;
+  font-weight: normal;
+  text-align: left;
+  line-height: normal;
+  padding: .5vw .5vw .5vw 1vw;
+}
+.search-input>span>img{
+  width: 20px;
+}
+.container-nav{
+  letter-spacing: .1vw;
+}
+.main-nav-desktop{
+
+  color: white;
+  background: #2d2d2d;
+  width: 100%;
+  display: block;
+  font-weight: bold;
+  text-align: center;
+}
+.main-nav-desktop-items{
+  cursor: pointer;
+    display: flex;
+    line-height: 4vw;
+}
+.main-nav-desktop-logo{
+   flex-grow: 1;
+}
+.main-nav-desktop-category{
+  flex-grow: 1;
+}
+.main-nav-desktop-search{
+  flex-grow: 7;
+}
+.main-nav-desktop-icons{
+  flex-grow: 1;
+}
+
+
+/*sub menu properties*/
+.main-nav-desktop-sub-nav{
+  color: white;
+  background-color: #666;
+  line-height: 4vw;
+  display: flex;
+  font-size: smaller;
+}
+.main-nav-desktop-sub-nav-category{
+  padding-left: 2vw;
+  padding-right: 2vw;
+  cursor: pointer;
+}
+
+.main-nav-desktop-sub-nav{
+  display:flex;
+}
+
+/* on hover properties*/
+.main-nav-desktop-sub-nav-category:hover{
+  background-color:white;
+  color:darkgray;
+}
+
