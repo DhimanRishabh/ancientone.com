@@ -1,24 +1,26 @@
 
 .search-input{
-  font-size: medium;
+  font-size: .8rem;
   background-color: white;
+  line-height: 0;
+  height: 2.3rem;
+  border-radius: 1.2rem;
 }
 .search-input>input{
   width: 90%;
-  border-radius: 1vw;
   border: none;
   outline: none;
   color: lightgray;
   font-weight: normal;
   text-align: left;
-  line-height: normal;
+  margin: auto;
   padding: .5vw .5vw .5vw 1vw;
-}
-.search-input>span>img{
-  width: 20px;
+  position: relative;
+  height: inherit;
 }
 .container-nav{
   letter-spacing: .1vw;
+  box-shadow: 0px 1px 4px;
 }
 .main-nav-desktop{
 
@@ -30,9 +32,11 @@
   text-align: center;
 }
 .main-nav-desktop-items{
+  font-size: 1rem;
   cursor: pointer;
-    display: flex;
-    line-height: 4vw;
+  display: -webkit-box;
+  display: flex;
+  line-height: 3em;
 }
 .main-nav-desktop-logo{
    flex-grow: 1;
@@ -41,34 +45,179 @@
   flex-grow: 1;
 }
 .main-nav-desktop-search{
+  position: relative;
+  margin: auto;
   flex-grow: 7;
 }
 .main-nav-desktop-icons{
+  flex-grow: .5;
+  line-height: 0;
+  position: relative;
+  margin: auto;
+  padding: 0;
+}
+.main-nav-desktop-icons:nth-child(1){
   flex-grow: 1;
 }
-
 
 /*sub menu properties*/
 .main-nav-desktop-sub-nav{
   color: white;
   background-color: #666;
-  line-height: 4vw;
+  line-height: 3em;
   display: flex;
-  font-size: smaller;
+  font-size: .8rem;
 }
 .main-nav-desktop-sub-nav-category{
   padding-left: 2vw;
   padding-right: 2vw;
   cursor: pointer;
 }
-
 .main-nav-desktop-sub-nav{
   display:flex;
 }
 
 /* on hover properties*/
-.main-nav-desktop-sub-nav-category:hover{
-  background-color:white;
-  color:darkgray;
+
+
+
+
+/* for mobile view */
+.main-nav-mobile{
+  width: 30em;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 1em;
+  font-weight: bold;
 }
 
+.main-nav-mobile-wrapper {
+  height: inherit;
+  width: 70%;
+  background: white;overflow-x:auto;
+  color:#2d2d2d;
+}
+.main-nav-mobile-items{
+
+}
+.main-nav-mobile-category {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  text-align: center;    line-height: 3rem;border-bottom-style: inset;
+  border-bottom-width: 1px;
+  border-bottom-color: lightgray;
+  color:lightgrey;
+}
+.main-nav-mobile-category>li{flex-grow: 1;cursor: pointer;}
+.main-nav-mobile-category>li:nth-child(1) {
+
+  border-right-style: inset;
+  border-right-width: 1px;
+  border-right-color: lightgray;
+}
+.main-nav-mobile-category-active{
+  color: #2d2d2d;
+  border-bottom-color: black;
+  box-shadow: 0px 2px 0px;
+}
+.main-nav-mobile-sub-nav-items-category{margin-top: 0;
+margin-bottom: 1rem;
+padding: 1vw 1vw 1vw 1vw;}
+.main-nav-mobile-sub-nav-items-category>li{
+  background: #efefef;    margin: 3vw 3vw 3vw 3vw;cursor: pointer;
+}
+.main-nav-mobile-sub-nav-items-category>li:hover>div{
+  color: #666;
+}
+
+.main-nav-mobile-sub-nav-items-category>li>div{
+  padding: 2vw 2vw 2vw 2vw;
+}
+.main-nav-mobile-sub-nav-items {
+  font-size: 1rem;
+}
+.main-nav-mobile-close {
+  background: #2d2d2d;
+  top: 1px;
+  width: 3rem;
+  left: 70%;
+  position: absolute;
+  height: auto;
+}
+.main-nav-mobile-close>div{
+  width: inherit;
+  padding: .7rem;    box-shadow: 0px 0px 3px 3px;
+  color: lightblue;
+  cursor: pointer;
+}
+
+
+
+/**  mobile nav css ends ehere **/
+.sub-nav-details {
+  height: inherit;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 1vw 1vw 1vw 1vw;
+  grid-gap: 3vw;
+}
+.main-nav-desktop-sub-nav-details {
+  hheight: auto;
+  background: whitesmoke;
+  position: absolute;
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+
+}
+
+.sub-nav-details-items {
+  height: inherit;
+  font-size: .8rem;
+}
+.category-heading {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1vw;
+  box-shadow: 0px 2px 0px;
+}
+ul.category-items {
+  padding: 1vw;
+  display: inline-block;
+  width: 100%;
+}
+ul.category-items>li{
+  padding: .4rem;
+  cursor: pointer;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+}
+ul.category-items>li>div:hover{
+  color:royalblue;
+}
+
+.active-sub{
+  background-color: whitesmoke;
+  color:#666666;
+}
+.category-item{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+}
+.category-item-img {
+  border-radius: 9rem;
+  border-color: lightgray;
+  border-style: solid;    margin-right: 2em;
+}
+.category-item-img>img{
+  width:2.4rem;
+}
