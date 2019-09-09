@@ -1,0 +1,51 @@
+
+.filter-web {
+  padding: .5vw .5vw .5vw .5vw;
+}
+.filter-web-list {
+  background: whitesmoke;
+  padding: 1vw 1vw 1vw 1vw;
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+  grid-column-gap: .5em;
+  color: gray;
+}
+
+.filter-web-items {
+  width: 100%;
+  border-color: lightgray;
+  border-bottom-style: SOLID;
+  border-width: 1px;
+  margin: .2em;
+  font-size: inherit;
+  border-top-style: solid;
+  height: auto;
+  padding: .5vw .5vw .5vw .5vw;
+  position: relative;
+}
+.filter-web-items>span>img {
+  float: right;
+  margin: auto;
+  height: inherit;
+}
+.filter-web-items-sublist {
+  width: 100%;
+  background: whitesmoke;
+  position: absolute;
+  height: 11.3rem;
+  z-index: 20;
+  padding: .5vw;
+  margin: 0;
+  border-radius: .2em;
+  font-size: .8rem;
+  font-weight: normal;
+  overflow-y: auto;
+}
+.filter-web-subitem {
+  padding: .5em;
+  background: white;
+  margin: .3em;
+  border-radius: 0.2em;
+  color: gray;
+}

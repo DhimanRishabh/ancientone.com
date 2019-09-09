@@ -9,7 +9,10 @@ import { FrontpageComponent } from './home/frontpage/frontpage.component';
 import { AboutComponent } from './home/about/about.component';
 import { ContactComponent } from './home/contact/contact.component';
 import { ShopComponent } from './home/shop/shop.component';
-import {AppRoutesModule} from "./app-routes/app-routes.module";
+import {AppRoutesModule} from './app-routes/app-routes.module';
+import {RouterModule} from '@angular/router';
+import { ProductComponent } from './home/shop/product/product.component';
+import { FiltersComponent } from './home/shop/filters/filters.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,16 @@ import {AppRoutesModule} from "./app-routes/app-routes.module";
     FrontpageComponent,
     AboutComponent,
     ContactComponent,
-    ShopComponent
+    ShopComponent,
+    ProductComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutesModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

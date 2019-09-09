@@ -169,12 +169,13 @@ padding: 1vw 1vw 1vw 1vw;}
   grid-gap: 3vw;
 }
 .main-nav-desktop-sub-nav-details {
-  hheight: auto;
+  height: auto;
   background: whitesmoke;
   position: absolute;
   width: 96%;
   margin-left: 2%;
   margin-right: 2%;
+  z-index:999;
 
 }
 

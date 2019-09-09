@@ -4,8 +4,8 @@
       <div class="main-nav-desktop-items">
         <div *ngIf="showMenuBar" class="main-nav-desktop-icons"><button (click)="showMobileMenuFn()"><span><img src="assets/icons/menu.svg"></span></button></div>
         <div class="main-nav-desktop-logo">AncientOne</div>
-        <div *ngIf="showCategory" class="main-nav-desktop-category"  style=" background-color: #666">WOMEN</div>
-        <div *ngIf="showCategory" class="main-nav-desktop-category">MEN</div>
+        <div *ngIf="showCategory" class="main-nav-desktop-category"  style=" background-color: #666" [routerLink]="['/women']">WOMEN</div>
+        <div *ngIf="showCategory" class="main-nav-desktop-category" [routerLink]="['/men']">MEN</div>
         <div class="main-nav-desktop-search"><div *ngIf="showSearchBar" class="search-input"><input type="text" placeholder="Search brands,items"><span><img src="assets/icons/magnifier-tool.svg"></span></div></div>
         <div *ngIf="!showSearchBar" class="main-nav-desktop-icons"><span><img src="assets/icons/magnifier-tool-white.svg"></span></div>
         <div class="main-nav-desktop-icons"><span><img src="assets/icons/profile.svg"></span></div>
@@ -14,7 +14,7 @@
       </div>
     </div  >
     <div *ngIf="showSubNav" class="main-nav-desktop-sub-nav">
-        <div class="main-nav-desktop-sub-nav-category" [ngClass]="{'active-sub':selectCategory=='New In'}" (mouseover)="showSubMenuDetails($event,true)"><div>New In</div></div>
+        <div class="main-nav-desktop-sub-nav-category" [ngClass]="{'active-sub':selectCategory=='New In'}" (mouseover)="showSubMenuDetails($event,true)"  ><div>New In</div></div>
         <div class="main-nav-desktop-sub-nav-category" [ngClass]="{'active-sub':selectCategory=='Clothing'}"   (mouseover)="showSubMenuDetails($event,true)" ><div>Clothing</div></div>
         <div class="main-nav-desktop-sub-nav-category"  [ngClass]="{'active-sub':selectCategory=='Shoes'}" (mouseover)="showSubMenuDetails($event,true)" ><div>Shoes</div></div>
         <div class="main-nav-desktop-sub-nav-category"  [ngClass]="{'active-sub':selectCategory=='Accessories'}" (mouseover)="showSubMenuDetails($event,true)" style="background-color: #d01345;
@@ -29,7 +29,7 @@
         <div class="sub-nav-details-items">
           <div class="category-heading">Shop By Product</div>
           <ul class="category-items">
-            <li><div class="category-item">Clothing</div></li>
+            <li><div class="category-item" [routerLink]="['women','clothing','new_in']" >Clothing</div></li>
             <li><div class="category-item">Accessories</div></li>
             <li><div class="category-item">Shoes</div></li>
             <li><div class="category-item">Activewear</div></li>
@@ -85,6 +85,8 @@
         </div>
       </div>
       </div>
+
+
       <div class="main-nav-mobile-close" (click)="showMobileMenuFn()">
         <div ><span><img src="assets/icons/cancel-music.svg"></span></div>
       </div>
