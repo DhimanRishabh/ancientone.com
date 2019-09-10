@@ -5,13 +5,14 @@ import {AppComponent} from '../app.component';
 import {HomeComponent} from '../home/home.component';
 import {ShopComponent} from '../home/shop/shop.component';
 import {FrontpageComponent} from '../home/frontpage/frontpage.component';
+import {JoinusComponent} from '../home/joinus/joinus.component';
 
 const appRoutes:Routes=[
-  {path:'',component:HomeComponent,children:[{
-    path:':id',component:FrontpageComponent},
-    {path:':id1/:id2/:id3',component:ShopComponent}
-
-    ]},
+  {path:'',component:HomeComponent,children:[
+      {path:'identity',component:JoinusComponent},
+      {path:':id',component:FrontpageComponent},
+      {path:':id1/:id2/:id3',component:ShopComponent}
+    ]}
 
 ]
 

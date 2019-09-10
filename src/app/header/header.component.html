@@ -12,12 +12,12 @@
         <div class="main-nav-desktop-icons"><span><img src="assets/icons/heart.svg"></span></div>
         <div class="main-nav-desktop-icons"><span><img src="assets/icons/shopping-bag.svg"></span></div>
       </div>
-      <div class="identity-container" *ngIf="showIdentityBox" >
+      <div class="identity-container" *ngIf="showIdentityBox" (mouseleave)="showIdentityBoxFn(false)" >
         <div class="identity-items">
-          <div class="identity-item">Singup / Login</div>
-          <div class="identity-item">My Account</div>
-          <div class="identity-item">My Cart</div>
-          <div class="identity-item">Help</div>
+          <div class="identity-item" [routerLink]="['/identity']" ><div class="identity-item-icons"><span><img src="assets/icons/social.svg" ></span></div>Singup / Login</div>
+          <div class="identity-item"><div class="identity-item-icons"><span><img src="assets/icons/man.svg"></span></div>My Account</div>
+          <div class="identity-item"><div class="identity-item-icons"><span><img src="assets/icons/shopping-basket.svg"></span></div>My Cart</div>
+          <div class="identity-item"><div class="identity-item-icons"><span><img src="assets/icons/user_help.svg"></span></div>Help</div>
         </div>
       </div>
     </div>
@@ -38,7 +38,7 @@
         <div class="sub-nav-details-items">
           <div class="category-heading">Shop By Product</div>
           <ul class="category-items">
-            <li><div class="category-item" [routerLink]="['women','clothing','new_in']" >Clothing</div></li>
+            <li><div class="category-item" [routerLink]="['women','clothing','new_in']" (click)="showSubMenuDetails($event,false)" >Clothing</div></li>
             <li><div class="category-item">Accessories</div></li>
             <li><div class="category-item">Shoes</div></li>
             <li><div class="category-item">Activewear</div></li>

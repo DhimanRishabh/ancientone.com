@@ -13,6 +13,7 @@ import {AppRoutesModule} from './app-routes/app-routes.module';
 import {RouterModule} from '@angular/router';
 import { ProductComponent } from './home/shop/product/product.component';
 import { FiltersComponent } from './home/shop/filters/filters.component';
+import { JoinusComponent } from './home/joinus/joinus.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FiltersComponent } from './home/shop/filters/filters.component';
     ContactComponent,
     ShopComponent,
     ProductComponent,
-    FiltersComponent
+    FiltersComponent,
+    JoinusComponent
   ],
   imports: [
     BrowserModule,

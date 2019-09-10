@@ -230,15 +230,34 @@ ul.category-items>li>div:hover{
   position: absolute;
   height: 15rem;
   width: 18rem;
-  background: rebeccapurple;
+  background: white;
   right: 9vw;
-
+  color: black;
+  font-size: .8rem;
+  font-weight: normal;
+  text-align: left;
+}
+.identity-items {
+  padding: 1vw;
+}
+.identity-item {
+  border-bottom-style: solid;
+  border-width: .1em;
+  padding: 1.2vw;
+  display: flex;
+}
+.identity-item:hover{
+ color: #d01345;
+  cursor:pointer;
+}
+.identity-item-icons {
+  margin-right: 1.2rem;
 }
 .identity.main-nav-desktop-icons::after {
   content: '';
   height: 2em;
   width: 2em;
-  background: rebeccapurple;
+  background: white;
   position: absolute;
   display: -webkit-box;
   display: flex;
