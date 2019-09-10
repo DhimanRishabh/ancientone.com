@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
   showMobileMenu:boolean=false;
   showSubNavDetails: boolean=false;
   selectCategory: string;
+  showIdentityBox:boolean=false;
   ngOnInit() {
     this.innerWidth = window.innerWidth;
     this.onResize(null);
@@ -76,4 +77,8 @@ export class HeaderComponent implements OnInit {
     this.showSubNavDetails = value;
       this.selectCategory=$event.target.innerHTML;
   }
+  private showIdentityBoxFn(value:boolean){
+    this.showIdentityBox=value;
+  }
+
 }

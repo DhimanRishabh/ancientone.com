@@ -222,3 +222,30 @@ ul.category-items>li>div:hover{
 .category-item-img>img{
   width:2.4rem;
 }
+
+/*identity conatiner css starts here*/
+
+.identity-container{
+
+  position: absolute;
+  height: 15rem;
+  width: 18rem;
+  background: rebeccapurple;
+  right: 9vw;
+
+}
+.identity.main-nav-desktop-icons::after {
+  content: '';
+  height: 2em;
+  width: 2em;
+  background: rebeccapurple;
+  position: absolute;
+  display: -webkit-box;
+  display: flex;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 2rem;
+  right: 0;
+  left: 0;
+  margin: auto;
+}

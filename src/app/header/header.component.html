@@ -8,11 +8,20 @@
         <div *ngIf="showCategory" class="main-nav-desktop-category" [routerLink]="['/men']">MEN</div>
         <div class="main-nav-desktop-search"><div *ngIf="showSearchBar" class="search-input"><input type="text" placeholder="Search brands,items"><span><img src="assets/icons/magnifier-tool.svg"></span></div></div>
         <div *ngIf="!showSearchBar" class="main-nav-desktop-icons"><span><img src="assets/icons/magnifier-tool-white.svg"></span></div>
-        <div class="main-nav-desktop-icons"><span><img src="assets/icons/profile.svg"></span></div>
+        <div class="main-nav-desktop-icons" [ngClass]="{'identity':showIdentityBox==true}" (click)="showIdentityBoxFn(true)"><span><img src="assets/icons/profile.svg"></span></div>
         <div class="main-nav-desktop-icons"><span><img src="assets/icons/heart.svg"></span></div>
         <div class="main-nav-desktop-icons"><span><img src="assets/icons/shopping-bag.svg"></span></div>
       </div>
-    </div  >
+      <div class="identity-container" *ngIf="showIdentityBox" >
+        <div class="identity-items">
+          <div class="identity-item">Singup / Login</div>
+          <div class="identity-item">My Account</div>
+          <div class="identity-item">My Cart</div>
+          <div class="identity-item">Help</div>
+        </div>
+      </div>
+    </div>
+
     <div *ngIf="showSubNav" class="main-nav-desktop-sub-nav">
         <div class="main-nav-desktop-sub-nav-category" [ngClass]="{'active-sub':selectCategory=='New In'}" (mouseover)="showSubMenuDetails($event,true)"  ><div>New In</div></div>
         <div class="main-nav-desktop-sub-nav-category" [ngClass]="{'active-sub':selectCategory=='Clothing'}"   (mouseover)="showSubMenuDetails($event,true)" ><div>Clothing</div></div>
