@@ -176,10 +176,38 @@ app-filters-for-web {
 }
 .filter-item {
   display: flex;
-  width:100%;
+
 }
 .filter-item:nth-child(1) {
   margin-right: auto;
 
 }
 
+.sortBy {
+  display: flex;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgrey;
+  max-width: 17vw;
+  width: 17vw;
+}
+.size{
+  display: flex;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgrey;
+  max-width: 10vw;
+  width: 10vw;
+}
+.sortBy>.item-icons{
+  margin-right:0;
+  margin-left:auto;
+}
+.size>.item-icons{
+  margin-right:0;
+  margin-left:auto;
+}
