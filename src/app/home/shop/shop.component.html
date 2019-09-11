@@ -16,7 +16,7 @@
 <!--    </div>-->
 <!--  </div>-->
 <!--  <div class="filter-container">-->
-<!--    <div class="filters">-->
+<!--    <div class="filtersForMobile">-->
 <!--      <div>Filter 1</div>-->
 <!--      <div>Filter 1</div>-->
 <!--      <div>Filter 1</div>-->
@@ -27,19 +27,28 @@
 <!--    </div>-->
 <!--  </div>-->
 
-  <div class="something-about-product">
+  <div class="something-about-product" >
     <div class="heading">
       Men's New in: Clothing
     </div>
-    <div  class="subheading">
+    <div  class="subheading" *ngIf="showWebFilter">
       If you haven’t got time for a lengthy scroll session or get bored after a five-minute search, then hang on just a minute. Get direct to all the latest men’s clothes with our New In clothing page. We’re making shopping for updated style simple by putting all the latest drops in one place, so you can keep your look ahead of the pack.
       We’ll cover every base, from your sharpest Saturday night flex through to your most laidback Sunday looks and every style in between. Keep it vintage with classic polo shirts from Fred Perry, while ASOS Design and River Island are the go-to for your everyday dress, with simple staples like jeans and t-shirts. And don’t forget that all-important workwear, with all the crisp block stripe shirts to see you through the working week, from the best designers in the business. We even drop in the likes of ties, trunks and footwear – so you’ll never miss out on any look before it happens with our men’s new clothes page.
 
       </div>
   </div>
+  <ng-template [ngIf]="showWebFilter" >
+    <app-filters-for-web></app-filters-for-web>
 
-  <app-filters *ngIf="showWebFilter"></app-filters>
-  <div class="items-container">
+  <div class="filter-for-web-hotfix-container">
+    <div class="filter-bar">
+      <div class="filter-bar-items">
+        <div class="filter-item">Size</div>
+        <div class="filter-item"><div class="sortBy">Sort By: <div class="item-icons"><span><img src="assets/icons/down-arrow.svg"></span></div></div></div>
+      </div>
+    </div>
+  </div> </ng-template>
+  <div class="items-container" >
     <div class="items-list">
       <div class="item-cover-box" *ngFor="let i of [01,02,03,04,05,06,07,08,09]" (mouseover)="showOverlayForItem(i)">
         <div class="item-cover-image">
@@ -52,13 +61,14 @@
             </div>
             <div class="item-cover-lcontent">
               <div class="item-cover-content-heading">Nike</div>
-              <div class="item-cover-content-subheading">SomethingLoreum Lapsum</div>
+              <div class="item-cover-content-subheading">Moss London smart cropped trousers in black</div>
+              <div class="item-cover-content-heading">$200</div>
             </div>
 
           </div>
         </div>
 
-        <div  class="item-cover-box-overlay" *ngIf="selectedItem==i">
+        <div  class="item-cover-box-overlay" *ngIf="selectedItem==i && false">
            <div class="item-cover-box-overlay-content">
              <div class="item-cover-box-details">
                <div class="item-cover-box-details-number1">0</div>
@@ -76,6 +86,7 @@
       </div>
     </div>
   </div>
-
-
+  <ng-template [ngIf]="!showWebFilter" >
+  <app-filters-for-mobile></app-filters-for-mobile>
+  </ng-template>
 </div>

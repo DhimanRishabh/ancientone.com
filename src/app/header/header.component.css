@@ -54,7 +54,7 @@
   line-height: 0;
   position: relative;
   margin: auto;
-  padding: 0;
+  padding:.8rem;
 }
 .main-nav-desktop-icons:nth-child(1){
   flex-grow: 1;
@@ -95,6 +95,7 @@
   left: 0;
   font-size: 1em;
   font-weight: bold;
+  z-index: 100;
 }
 
 .main-nav-mobile-wrapper {
@@ -154,7 +155,7 @@ padding: 1vw 1vw 1vw 1vw;}
 .main-nav-mobile-close>div{
   width: inherit;
   padding: .7rem;    box-shadow: 0px 0px 3px 3px;
-  color: lightblue;
+
   cursor: pointer;
 }
 
@@ -263,7 +264,7 @@ ul.category-items>li>div:hover{
   display: flex;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: 2rem;
+  top: 3rem;
   right: 0;
   left: 0;
   margin: auto;

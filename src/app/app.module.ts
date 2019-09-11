@@ -12,8 +12,9 @@ import { ShopComponent } from './home/shop/shop.component';
 import {AppRoutesModule} from './app-routes/app-routes.module';
 import {RouterModule} from '@angular/router';
 import { ProductComponent } from './home/shop/product/product.component';
-import { FiltersComponent } from './home/shop/filters/filters.component';
-import { JoinusComponent } from './home/joinus/joinus.component';
+import { JoinUsComponent } from './join-us/join-us.component';
+import { FiltersForMobileComponent } from './home/shop/filters-for-mobile/filters-for-mobile.component';
+import { FiltersForWebComponent } from './home/shop/filters-for-web/filters-for-web.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +27,9 @@ import { JoinusComponent } from './home/joinus/joinus.component';
     ContactComponent,
     ShopComponent,
     ProductComponent,
-    FiltersComponent,
-    JoinusComponent
+    JoinUsComponent,
+    FiltersForMobileComponent,
+    FiltersForWebComponent
   ],
   imports: [
     BrowserModule,

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JoinusComponent } from './joinus.component';
+import { FiltersForMobileComponent } from './filters-for-mobile.component';
 
-describe('JoinusComponent', () => {
-  let component: JoinusComponent;
-  let fixture: ComponentFixture<JoinusComponent>;
+describe('FiltersForMobileComponent', () => {
+  let component: FiltersForMobileComponent;
+  let fixture: ComponentFixture<FiltersForMobileComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ JoinusComponent ]
+      declarations: [ FiltersForMobileComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(JoinusComponent);
+    fixture = TestBed.createComponent(FiltersForMobileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

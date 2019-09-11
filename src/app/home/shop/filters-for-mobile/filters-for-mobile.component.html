@@ -1,0 +1,29 @@
+<div class="filter-mobile-container">
+  <div class="filter-mobile-heading" (click)="showMobileMenu('sortby') " (mouseleave)="showMobileMenu('')" ><div class="item-icons"><span><img src="assets/icons/sort.svg"></span></div><span>Sort BY</span>
+    <div class="filter-mobile-itemsList" *ngIf="'sortby'===selectdMainFilter">
+      <div class="filter-mobile-heading"><span>Sort By </span></div>
+      <div class="filter-mobile-item">Popularity</div>
+      <div class="filter-mobile-item">Latest</div>
+      <div class="filter-mobile-item">Discount</div>
+      <div class="filter-mobile-item">Price:High To Low</div>
+      <div class="filter-mobile-item">Price:Low To High</div>
+    </div>
+  </div>
+  <div class="filter-mobile-heading" (click)="showMobileMenu('filter') "><div class="item-icons"><span><img src="assets/icons/filter.svg"></span></div><span>Filter</span>
+
+  </div>
+  <div class="filter-mobile-filtertype-Container" *ngIf="'filter'===selectdMainFilter">
+    <div class="filter-mobile-heading"><span>Filters</span><div>Clear</div><div (click)="showMobileMenu('')" >Close</div></div>
+     <div class="filter-mobile-items-grid">
+       <div class="filter-mobile-itemsList">
+           <div class="filter-mobile-item"><span>Gender</span></div>
+           <div class="filter-mobile-item"><span>Categories</span></div>
+           <div class="filter-mobile-item"><span>Size</span></div>
+           <div class="filter-mobile-item"><span>Product</span></div>
+           <div class="filter-mobile-item"><span>Brand</span></div>
+           <div class="filter-mobile-item"><span>Color</span></div>
+           <div class="filter-mobile-item"><span>Discount Range</span></div>
+       </div>
+     </div>
+  </div>
+</div>

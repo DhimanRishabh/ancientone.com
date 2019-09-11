@@ -1,0 +1,78 @@
+.filter-mobile-container{
+  background-color: ghostwhite;
+  position: fixed;
+  width: 100%;
+  height: 3rem;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  justify-items: center;
+}
+.filter-mobile-heading {
+  margin: auto;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+}
+
+.filter-mobile-itemsList {
+  position: fixed;
+  bottom: 0;
+  background: white;
+  width: 100%;
+  left: 0;
+  font-size: 1.1rem;
+  padding: 3vw;
+
+}
+.filter-mobile-item {
+  padding: 5vw;
+  font-weight: normal;
+ cursor: pointer;
+}
+.filter-mobile-item:hover{
+  background-color: lightgreen;
+}
+.filter-mobile-itemsList>.filter-mobile-heading {
+  grid-template-columns: 1fr 1fr ;
+  display: grid;
+}
+.filter-mobile-itemsList>.filter-mobile-heading>div {
+  margin-left: auto;
+}
+.filter-mobile-filtertype-Container {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: white;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+}
+.filter-mobile-filtertype-Container>.filter-mobile-heading {
+  /* position: relative; */
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 5vw;
+  cursor: pointer;
+  border-bottom-style: solid;
+  border-width: 1px;
+}
+.filter-mobile-filtertype-Container>.filter-mobile-heading>div {
+  margin-left: auto;
+  cursor: pointer;
+}
+.filter-mobile-filtertype-Container>.filter-mobile-items-grid>.filter-mobile-itemsList{
+  bottom:auto;
+  position: relative;
+}
+.filter-mobile-items-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.category-item-img {
+  border-radius: 9rem;
+  border-color: lightgray;
+  border-style: solid;    margin-right: 2em;
+}
