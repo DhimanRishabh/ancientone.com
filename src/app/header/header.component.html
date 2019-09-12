@@ -8,8 +8,13 @@
         <div *ngIf="showCategory" class="main-nav-desktop-category" [routerLink]="['/men']">MEN</div>
         <div class="main-nav-desktop-search"><div *ngIf="showSearchBar" class="search-input"><input type="text" placeholder="Search brands,items"><span><img src="assets/icons/magnifier-tool.svg"></span></div></div>
         <div *ngIf="!showSearchBar" class="main-nav-desktop-icons"><span><img src="assets/icons/magnifier-tool-white.svg"></span></div>
+        <ng-template [ngIf]="showSearchBar">
         <div class="main-nav-desktop-icons" [ngClass]="{'identity':showIdentityBox==true}" (click)="showIdentityBoxFn(true)"><span><img src="assets/icons/profile.svg"></span></div>
-        <div class="main-nav-desktop-icons"><span><img src="assets/icons/heart.svg"></span></div>
+        </ng-template>
+        <ng-template [ngIf]="!showSearchBar">
+          <div class="main-nav-desktop-icons" [ngClass]="{'identity':showIdentityBox==true}" [routerLink]="['/identity']"><span><img src="assets/icons/profile.svg"></span></div>
+        </ng-template>
+          <div class="main-nav-desktop-icons"><span><img src="assets/icons/heart.svg"></span></div>
         <div class="main-nav-desktop-icons"><span><img src="assets/icons/shopping-bag.svg"></span></div>
       </div>
       <div class="identity-container" *ngIf="showIdentityBox" (mouseleave)="showIdentityBoxFn(false)" >

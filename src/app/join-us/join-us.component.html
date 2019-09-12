@@ -1,9 +1,66 @@
 <div class="joinus-container">
   <div class="joinus-web-outerbox">
+    <div class="joinus-logo"[routerLink]="['/']" >Ancientone.com</div>
+    <ng-template [ngIf]="!showSignUp">
+    <div class="joinus-form-login-container" >
+      <div class="joinus-form-heading">Welcome back.</div>
+      <form class="joinus-form-inputs">
+        <div class="joinus-form-input">
+          <div>Email</div>
+          <input type="email" >
+        </div>
+        <div class="joinus-form-input">
+          <div>Password</div>
+          <input type="text" >
+        </div>
+        <div class="joinus-form-footer">
+          <div class="custom-button">
+            <input type="button" value="Login">
+          </div>
+          <div class="joinus-form-links">
+            <a href="">Forget password?</a>
+            <a [routerLink]="['/identity']" (click)="showSignUpFn(true)">SignUp.Join Us</a>
+          </div>
+        </div>
+      </form>
+    </div>
+    </ng-template>
+    <ng-template [ngIf]="showSignUp">
+      <div class="joinus-form-login-container" >
+        <div class="joinus-form-heading">Join Us.</div>
+        <form class="joinus-form-inputs">
+          <div class="joinus-form-input">
+            <div>Your name</div>
+            <input type="text">
+          </div>
+          <div class="joinus-form-input">
+            <div>Enter email address</div>
+            <input type="text" >
+          </div>
+          <div class="joinus-form-input">
+            <div>Password</div>
+            <input type="password" >
+            <div>Passwords must be at least 6 characters.</div>
+          </div>
+          <div class="joinus-form-input">
+            <div>Confirm password</div>
+            <input type="password" >
 
+          </div>
+
+          <div class="joinus-form-footer">
+            <div class="custom-button">
+              <input type="button" value="SignUp">
+            </div>
+            <div class="joinus-form-links">
+              <a [routerLink]="['/identity']" (click)="showSignUpFn(false)">Already memeber?Sign in</a>
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+    </ng-template>
 
   </div>
-
-
-
 </div>

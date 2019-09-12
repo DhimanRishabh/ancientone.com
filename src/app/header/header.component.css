@@ -71,7 +71,8 @@
 .main-nav-desktop-sub-nav-category{
   padding-left: 2vw;
   padding-right: 2vw;
-  cursor: pointer;
+  cursor: pointer;margin-left: .2vw;
+  margin-right: .2vw;
 }
 .main-nav-desktop-sub-nav{
   display:flex;
